@@ -20,25 +20,26 @@ const taskSlice = createSlice({
         },
 
       editTask: (state, action) => {
-        const { id, title } = action.payload;
+        const { id, title, status} = action.payload;
         console.log(action.payload);
         const existingTask = state.tasks.find((task) => task.id === id);
         if (existingTask) {
           existingTask.title = title;
+          existingTask.status = status;
         }
     },
 
-    prioritizeTask: (state, action) => {
-        const { id, priority } = action.payload;
+    statusChange: (state, action) => {
+        const { id, status } = action.payload;
         console.log(action.payload);
         const existingTask = state.tasks.find((task) => task.id === id);
         if (existingTask) {
-          existingTask.priority = priority;
+          existingTask.status = status;
         }
     },
 },
 });
 
 
-export const { addTask, removeTask, editTask } = taskSlice.actions;
+export const { addTask, removeTask, editTask, statusChange } = taskSlice.actions;
 export default taskSlice.reducer;

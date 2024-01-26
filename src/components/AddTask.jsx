@@ -5,6 +5,7 @@ import { toast } from 'react-toastify';
 
 const AddTaskForm = () => {
     const [newTaskTitle, setNewTaskTitle] = useState('');
+    // const [status ,setStatus] = useState('todo');
     const tasks = useSelector((state) => state.task.tasks);
     const dispatch = useDispatch();
 
@@ -17,6 +18,7 @@ const AddTaskForm = () => {
         const newTask = {
             id: tasks.length + 1,
             title: newTaskTitle,
+            status: 'todo',
             // other properties...
         };
 

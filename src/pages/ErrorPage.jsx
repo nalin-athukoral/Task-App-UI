@@ -4,7 +4,7 @@ import { useSelector, useDispatch} from 'react-redux'
 
 const ErrorPage = () => {
     const tasks = useSelector(state => state.task.tasks);
-    const dispatch = useDispatch();
+    // const dispatch = useDispatch();
 
     const todos = [
         { id: 1, title: 'Task 1', status: 'Todo' },

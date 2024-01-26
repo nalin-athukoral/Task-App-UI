@@ -27,6 +27,15 @@ const taskSlice = createSlice({
           existingTask.title = title;
         }
     },
+
+    prioritizeTask: (state, action) => {
+        const { id, priority } = action.payload;
+        console.log(action.payload);
+        const existingTask = state.tasks.find((task) => task.id === id);
+        if (existingTask) {
+          existingTask.priority = priority;
+        }
+    },
 },
 });
 

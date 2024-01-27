@@ -12,6 +12,7 @@ const AddTaskForm = () => {
     const handleAddTask = (e) => {
         e.preventDefault();
         if (newTaskTitle.trim() === '') {
+            toast.error('Please enter a task title');
             // Prevent adding an empty task
             return;
         }
@@ -27,13 +28,11 @@ const AddTaskForm = () => {
         toast.success('Task added successfully');
     };
 
-
-
     return (
         <div className='p-6'>
             <form onSubmit={handleAddTask}>
                 <input
-                    className='border-2 border-gray-300 bg-white h-10 px-5 pr-16 rounded-lg text-sm focus:outline-none m-4'
+                    className='border-2 border-gray-300 bg-white h-10 px-5 pr-16 rounded-lg text-sm focus:outline-none mb-4 mr-4'
                     type="text"
                     value={newTaskTitle}
                     onChange={(e) => setNewTaskTitle(e.target.value)} />

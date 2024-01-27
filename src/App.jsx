@@ -10,8 +10,6 @@ import SignIn from './pages/SignIn';
 import ErrorPage from './pages/ErrorPage';
 import LandPage from './pages/LandPage';
 import SignUpPage from './pages/SignUpPage';
-import { useEffect } from 'react';
-import axios from 'axios';
 import Navbar from './components/Navbar';
 
 function App() {

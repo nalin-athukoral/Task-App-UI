@@ -1,5 +1,6 @@
 import { googleLogout, useGoogleLogin } from "@react-oauth/google"
 import { useEffect, useState } from "react";
+import { useDispatch, useSelector } from 'react-redux'
 
 import axios from "axios";
 
@@ -7,17 +8,13 @@ import axios from "axios";
 
 const LogIn = () => {
 
+
     const [user, setUser] = useState([]);
     const [profile, setProfile] = useState(() => {
         const storedData = localStorage.getItem('profile');
         return storedData ? JSON.parse(storedData) : null;
+
     });
-
-    // const login = useGoogleLogin({
-    //     onSuccess: (codeResponse) => setUser(codeResponse),
-    //     onError: (error) => console.log('Login Failed:', error)
-
-    // });
 
     const login = useGoogleLogin({
         onSuccess: (codeResponse) => setUser(codeResponse),
@@ -53,9 +50,6 @@ const LogIn = () => {
         setProfile(null);
         localStorage.removeItem('profile');
     };
-
-    console.log(profile);
-
     return (
         <div className="text-center mt-10">
             <h2 className="text-2xl font-bold mb-4"> Google Login</h2>

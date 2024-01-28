@@ -8,11 +8,11 @@ const LandPage = () => {
                 <p className="text-lg mb-8">Stay organized and boost productivity with our powerful task management app.</p>
 
                 <div className="flex justify-center mb-8">
-                    <Link to="/signup" className="bg-white text-blue-500 hover:bg-gray-200 text-lg font-semibold px-6 py-3 rounded-full mr-4">Sign Up</Link>
+    
                     <Link to="/login" className="bg-white text-blue-500 hover:bg-gray-200 text-lg font-semibold px-6 py-3 rounded-full">Log In</Link>
                 </div>
 
-                <p className="text-sm">Already have an account? <Link to="/login" className="underline">Log in here</Link></p>
+                {/* <p className="text-sm">Already have an account? <Link to="/login" className="underline">Log in here</Link></p> */}
             </div>
         </div>
     );

@@ -3,7 +3,7 @@ import LogOut from "../components/LogOut";
 import LogIn from "../components/LogIn";
 import { GoogleOAuthProvider } from "@react-oauth/google";
 
-const LoginComponent = () => {
+const GoogleLogin = () => {
 
     return (
         <div>
@@ -16,4 +16,4 @@ const LoginComponent = () => {
 
 }
 
-export default LoginComponent;
+export default GoogleLogin;

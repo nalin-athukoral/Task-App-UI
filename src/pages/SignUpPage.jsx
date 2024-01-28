@@ -1,3 +1,6 @@
+// This is SignUp page where user can login to the application - we use google auth diffrent page so no need this anymore
+// If log in system need JWT token then we can use this page
+
 const SignUpPage = () => {
     return (
         <div className="min-h-screen flex items-center justify-center bg-gray-100">

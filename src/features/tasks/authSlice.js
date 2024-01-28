@@ -1,5 +1,6 @@
 import { createSlice} from '@reduxjs/toolkit';
 
+// This slice for authentication of user and storing user data in localstorage 
 const initialState = {
     isauthenticated: false,
     user: localStorage.getItem('profile') ? JSON.parse(localStorage.getItem('profile')) : null,

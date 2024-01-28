@@ -24,7 +24,7 @@ const TaskList = ({ todos }) => {
             // status = selectedTodo.status;
             dispatch(editTask({ id: selectedTodo.id, title, status }));
         }
-        else{
+        else {
             dispatch(editTask({ id: selectedTodo.id, title, status }));
         }
 

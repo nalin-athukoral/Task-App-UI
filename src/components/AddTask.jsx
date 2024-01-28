@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { addTask } from '../features/tasks/taskSlice'
 import { toast } from 'react-toastify';
 
+// This component use for add new task to the list 
 const AddTaskForm = () => {
     const [newTaskTitle, setNewTaskTitle] = useState('');
     // const [status ,setStatus] = useState('todo');

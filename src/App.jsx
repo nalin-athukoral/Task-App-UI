@@ -3,16 +3,29 @@ import './App.css';
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer, toast } from 'react-toastify';
 import { Routes, Route } from 'react-router-dom';
-import { ProtectedRoute } from './utils'; 
+import { ProtectedRoute } from './utils';
 import { LandPage, About, GoogleLogin, ErrorPage, SignUpPage, TestPage, Dashboard } from './pages/index';
 import { Navbar } from './components/index';
+import { useEffect, useState } from 'react';
 
 function App() {
 
+  // const [profile, setProfile] = useState(() => {
+  //   const storedData = localStorage.getItem('profile');
+  //   return storedData ? JSON.parse(storedData) : null;
+
+  // });
+
+  // useEffect(() => {
+  //   setProfile(JSON.parse(localStorage.getItem('profile')));
+  // }, [profile]);
+
   return (
     <div className='app'>
+     {/* Navabr componrntd */}
       <Navbar />
-      <Routes>
+      {/* All the application Routes */}
+      (<Routes>
         <Route path='/' Component={LandPage} />
         <Route path='/about' Component={About} />
         <Route path='/login' Component={GoogleLogin} />
@@ -23,7 +36,8 @@ function App() {
         </ProtectedRoute>} />
         <Route path='/google' Component={GoogleLogin} />
         <Route path='*' Component={ErrorPage} />
-      </Routes>
+      </Routes>)
+      {/* Toast Container */}
       <ToastContainer
         position="bottom-right"
         autoClose={2000}

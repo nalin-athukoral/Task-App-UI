@@ -1,6 +1,7 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import axios from 'axios';
 
+// This slice is for fetching data from the server.Not completed yet
 const initialState = {
     tasks: [],
     isloading: false,

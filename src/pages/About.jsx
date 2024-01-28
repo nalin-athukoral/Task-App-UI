@@ -1,4 +1,5 @@
 
+// simple about page to display some information about the website
 const About = () => {
     return (
         <div className="container mx-auto mt-8">

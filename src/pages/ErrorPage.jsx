@@ -1,3 +1,4 @@
+// This is error page when user try to access the page that is not exist
 const ErrorPage = () => {
     return (
         <div className="flex items-center justify-center h-screen bg-gray-100">

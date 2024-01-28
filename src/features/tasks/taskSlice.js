@@ -1,5 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 
+// This slice is for adding, removing, editing and changing status of tasks
 const initialState = {
     tasks:[],
 

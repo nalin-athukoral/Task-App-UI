@@ -2,6 +2,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import { fetchContent } from "../features/tasks/apitaskSlice";
 
+//I use this page to test the functionalities and then i move the code to the actual page where i want to use it.
 const TestPage = () => {
 
     const dispatch = useDispatch();

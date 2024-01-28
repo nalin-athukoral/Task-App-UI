@@ -2,11 +2,11 @@ import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
 export const apiSlice = createApi({
   reducerPath: 'apiSlice',
   baseQuery: fetchBaseQuery({
-    baseUrl: 'https://jsonplaceholder.typicode.com',
+    baseUrl: 'http://localhost:5281',
   }),
   tagTypes: ['Post'],
   endpoints: (builder) => ({
-    getPosts: builder.query({
+    getTasks: builder.query({
       query: () => '/posts',
     }),
   }),

@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 
+// This is the initial landign page of the application 
 const LandPage = () => {
     return (
         <div className="bg-gradient-to-r from-slate-200 to-purple-500 text-white min-h-screen flex items-center">

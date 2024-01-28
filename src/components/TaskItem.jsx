@@ -1,3 +1,4 @@
+// This component is responsible for displaying a single task item. 
 const TaskItem = ({ title, deleteButton, editButton }) => {
     return (
         <div className="bg-orange-300 p-4 rounded shadow mb-4 ">

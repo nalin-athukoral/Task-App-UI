@@ -1,5 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 
+// This slice for route protection and storing user data in localstorage
 const initialState = {
     user: localStorage.getItem('profile') ? JSON.parse(localStorage.getItem('profile')) : null,
 };

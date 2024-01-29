@@ -1,41 +1,33 @@
-import { useDispatch, useSelector } from "react-redux";
-import { useEffect } from "react";
-import { fetchContent } from "../features/tasks/apitaskSlice";
+import { data } from 'autoprefixer';
+import { useGetTasksQuery } from '../api/apiSlice'
 
 //I use this page to test the functionalities and then i move the code to the actual page where i want to use it.
 const TestPage = () => {
 
-    const dispatch = useDispatch();
-
-    useEffect(() => {
-        dispatch(fetchContent())
-
-    }, [dispatch]);
-
-    const contents = useSelector((state) => state.apiTask.tasks)
-    const isLoading = useSelector((state) => state.apiTask.isLoading)
-    const error = useSelector((state) => state.apiTask.error)
+    const { data: taskData, error, isLoading, isError } = useGetTasksQuery();
+    console.log(taskData);
 
     if (isLoading) {
-        return 'loading...'
+        return <div>Loading...</div>
     }
 
-    if (error) {
-        return error
+    if (isError) {
+        return <div>{error}</div>
     }
+
+
+
     return (
-        <div className="bg-gray-100 h-screen flex items-center justify-center">
-            <div className="max-w-md bg-white p-8 shadow-md rounded-md mx-4 sm:mx-auto">
-                <h1 className="text-3xl font-bold mb-4 text-center">Task Titles</h1>
-                <ul>
-                    {contents.map((task) => (
-                        <li key={task.id} className="text-lg mb-2">
-                            {task.title}
-                        </li>
-                    ))}
-                </ul>
-            </div>
-        </div>
+        <>
+            {
+                taskData.map((task) => (
+                    <div key={task.id}>
+                        <h1 className='bg-slate-300'>{task.title}</h1>
+                        <p className='bg-gray-700'>{task.body}</p>
+                    </div>
+                ))
+            }
+        </>
     )
 }
 

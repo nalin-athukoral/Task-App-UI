@@ -25,18 +25,19 @@ function App() {
      {/* Navabr componrntd */}
       <Navbar />
       {/* All the application Routes */}
-      (<Routes>
+      <Routes>
         <Route path='/' Component={LandPage} />
         <Route path='/about' Component={About} />
         <Route path='/login' Component={GoogleLogin} />
         <Route path='signup' Component={SignUpPage} />
         <Route path='/dashboard' Component={Dashboard} />
-        <Route path='/test' element={<ProtectedRoute>
+        {/* <Route path='/test' element={<ProtectedRoute>
           <TestPage />
-        </ProtectedRoute>} />
+        </ProtectedRoute>} /> */}
+        <Route path='/test' Component={TestPage} />
         <Route path='/google' Component={GoogleLogin} />
         <Route path='*' Component={ErrorPage} />
-      </Routes>)
+      </Routes>
       {/* Toast Container */}
       <ToastContainer
         position="bottom-right"

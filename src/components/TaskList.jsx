@@ -8,6 +8,9 @@ import { editTask, removeTask } from '../features/tasks/taskSlice';
 
 const TaskList = ({ todos }) => {
 
+    const [isModalOpen, setIsModalOpen] = useState(false);
+    const [selectedTodo, setSelectedTodo] = useState(null);
+
     const dispatch = useDispatch();
 
     const handleEditTodo = (id, initialValue, status) => {
@@ -24,7 +27,7 @@ const TaskList = ({ todos }) => {
             // status = selectedTodo.status;
             dispatch(editTask({ id: selectedTodo.id, title, status }));
         }
-        else {
+        else{
             dispatch(editTask({ id: selectedTodo.id, title, status }));
         }
 
@@ -35,9 +38,6 @@ const TaskList = ({ todos }) => {
     const handleCloseModal = () => {
         setIsModalOpen(false);
     };
-
-    const [isModalOpen, setIsModalOpen] = useState(false);
-    const [selectedTodo, setSelectedTodo] = useState(null);
 
     // const tasks = useSelector(state => state.task.tasks);
 

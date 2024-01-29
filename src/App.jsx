@@ -6,8 +6,7 @@ import { Routes, Route } from 'react-router-dom';
 import { ProtectedRoute } from './utils';
 import { LandPage, About, GoogleLogin, ErrorPage, SignUpPage, TestPage, Dashboard } from './pages/index';
 import { Navbar } from './components/index';
-import { useEffect, useState } from 'react';
-import AddPost from './pages/AddPost';
+import AddPost from './components/AddPost';
 
 function App() {
 

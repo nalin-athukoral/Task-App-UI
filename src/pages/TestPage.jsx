@@ -19,7 +19,7 @@ const TestPage = () => {
     const [editTask] = useEditItemMutation();
 
     const handleEditTodo = (taskId, initialValue, status) => {
-        setSelectedTodo({taskId, initialValue, status});
+        setSelectedTodo({ taskId, initialValue, status });
         setIsModalOpen(true);
     };
 
@@ -61,11 +61,21 @@ const TestPage = () => {
     }
 
     if (isLoading) {
-        return <div>Loading...</div>
+        return (
+            <div className="p-4 bg-gray-200">
+                <h2 className="text-2xl font-bold mb-4">Loading</h2>
+
+            </div>
+        )
     }
 
     if (isError) {
-        return <div>{error}</div>
+        return (
+            <div className="p-4 bg-gray-200">
+                <h2 className="text-2xl font-bold mb-4">Please Connect Database</h2>
+
+            </div>
+        )
     }
 
     return (

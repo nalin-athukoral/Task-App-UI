@@ -30,11 +30,11 @@ function App() {
         <Route path='/addpost' Component={AddPost} />
         <Route path='/login' Component={GoogleLogin} />
         <Route path='signup' Component={SignUpPage} />
-        <Route path='/dashboard' Component={Dashboard} />
+        <Route path='/dashboard' Component={TestPage} />
         {/* <Route path='/test' element={<ProtectedRoute>
           <TestPage />
         </ProtectedRoute>} /> */}
-        <Route path='/test' Component={TestPage} />
+        <Route path='/test' Component={Dashboard} />
         <Route path='/google' Component={GoogleLogin} />
         <Route path='*' Component={ErrorPage} />
       </Routes>

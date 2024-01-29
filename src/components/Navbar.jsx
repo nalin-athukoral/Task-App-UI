@@ -15,6 +15,7 @@ const Navbar = () => {
           <li><Link to="/" className="text-white hover:text-gray-300">Home</Link></li>
           <li><Link to="/dashboard" className="text-white hover:text-gray-300">Dashboard</Link></li>
           <li><Link to="/login" className="text-white hover:text-gray-300">Log In</Link></li>
+          <li><Link to="/test" className="text-white hover:text-gray-300">In Memory</Link></li>
 
         </ul>
       </div>

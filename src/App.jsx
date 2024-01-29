@@ -7,6 +7,7 @@ import { ProtectedRoute } from './utils';
 import { LandPage, About, GoogleLogin, ErrorPage, SignUpPage, TestPage, Dashboard } from './pages/index';
 import { Navbar } from './components/index';
 import { useEffect, useState } from 'react';
+import AddPost from './pages/AddPost';
 
 function App() {
 
@@ -27,7 +28,7 @@ function App() {
       {/* All the application Routes */}
       <Routes>
         <Route path='/' Component={LandPage} />
-        <Route path='/about' Component={About} />
+        <Route path='/addpost' Component={AddPost} />
         <Route path='/login' Component={GoogleLogin} />
         <Route path='signup' Component={SignUpPage} />
         <Route path='/dashboard' Component={Dashboard} />

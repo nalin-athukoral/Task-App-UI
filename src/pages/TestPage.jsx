@@ -1,5 +1,6 @@
 import { data } from 'autoprefixer';
 import { useGetTasksQuery } from '../api/apiSlice'
+import AddPost from './AddPost';
 
 //I use this page to test the functionalities and then i move the code to the actual page where i want to use it.
 const TestPage = () => {
@@ -19,6 +20,7 @@ const TestPage = () => {
 
     return (
         <>
+            <AddPost />
             {
                 taskData.map((task) => (
                     <div key={task.id}>
@@ -27,6 +29,7 @@ const TestPage = () => {
                     </div>
                 ))
             }
+
         </>
     )
 }
